@@ -25,6 +25,7 @@ for pip in pips:
     print("{} packages need to be upgraded".format(len(packages)))
     if not packages:
         continue
+    print("They are: {}".format(packages))
     try:
         out = check_output([pip, "install", "-U"] + packages)
     except:
