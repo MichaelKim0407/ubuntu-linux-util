@@ -2,16 +2,39 @@ set nocompatible
 
 filetype indent plugin on
 syntax on
+set encoding=utf8
 
+" tabs
 set backspace=indent,eol,start
 set autoindent
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 
+" display
 set number
+set cursorline
+set cursorcolumn
+" set ruler
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
+set laststatus=2
+set scrolloff=3
 
+" enable mouse
 set mouse=a
 
+" confirm unsaved on exit
 set confirm
 
+" default content for new files
+autocmd BufNewFile *.sh,*.py exec ":call SetTitle()"
+func SetTitle()
+    if &filetype == 'sh'
+        call setline(1, "#!/bin/bash")
+        call append(line("."), "")
+    elseif &filetype == 'python'
+        call setline(1, "#!/usr/bin/python3")
+        call append(line("."), "")
+    endif
+endfunc
+autocmd BufNewFile * normal G
