@@ -19,7 +19,7 @@ ln -s $(pwd)/*.sh ~/
 
 Make sure you have `apt`, `pip2` and `pip3` installed.
 
-If you don't have all of them, you can modify `update.sh` and `show.sh` to suit your own needs.
+If you don't have all of them, you can modify `check/update.sh` and `check/show.sh` to suit your own needs.
 
 Run as `root` in this directory:
 
