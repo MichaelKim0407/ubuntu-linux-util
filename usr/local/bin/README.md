@@ -3,5 +3,5 @@
 Run as `root` in this directory:
 
 ```
-ln -s $(pwd)/* /usr/local/bin/
+ln -s $(pwd)/{command name} /usr/local/bin/
 ```
