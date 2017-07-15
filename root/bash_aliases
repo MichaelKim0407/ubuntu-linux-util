@@ -1,0 +1,4 @@
+alias pipL='pip2 list --outdated'
+alias pip3L='pip3 list --outdated'
+alias pipU='pip2 install -U'
+alias pip3U='pip3 install -U'
