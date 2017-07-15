@@ -10,13 +10,13 @@ fi
 dev=/dev/$1
 media=/media/$USER/$1
 exist=$(ls /media/$USER | grep $1)
+
 if [ -z "$exist" ]
 then
     echo "Mounting $dev as $media (readonly)"
-    sudo mkdir $media && sudo mount -o ro $dev $media
+    mkdir $media && mount -o ro $dev $media
 else
     echo "Unmounting $dev | $media"
-    sudo umount $media
-    sudo rm -r $media
+    umount $media
+    rm -r $media
 fi
-

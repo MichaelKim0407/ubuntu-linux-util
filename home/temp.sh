@@ -1,4 +1,3 @@
 #!/bin/bash
 
-acpi -V
-
+acpi -t

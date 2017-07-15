@@ -21,7 +21,9 @@ set laststatus=2
 set scrolloff=3
 
 " enable mouse
-set mouse=a
+if has('mouse')
+    set mouse=a
+endif
 
 " confirm unsaved on exit
 set confirm

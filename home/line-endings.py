@@ -91,4 +91,3 @@ if __name__ == "__main__":
     logger.info("Excludes: {}".format(EXCLUDE))
 
     convert(".")
-
