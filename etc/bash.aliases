@@ -1,4 +1,4 @@
-alias ls='ls --color=auto'
+alias ls='ls-git --color=auto'
 
 alias grep='grep --color=auto 2>/dev/null'
 alias fgrep='fgrep --color=auto'
