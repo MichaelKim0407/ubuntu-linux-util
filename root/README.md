@@ -41,3 +41,7 @@ Add to `cron` using `crontab -e`:
 ```
 0 * * * * /root/check/update.sh
 ```
+
+# Update pip packages
+
+`pip-upgrade-all.py` has been moved to project [mkpipU](https://githu.com/MichaelKim0407/mk-pip-upgrade-all).
