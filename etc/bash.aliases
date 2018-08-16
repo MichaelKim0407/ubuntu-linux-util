@@ -7,6 +7,7 @@ alias egrep='egrep --color=auto'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias lll='/bin/ls -laGF'
 
 alias netstat='netstat 2>/dev/null'
 alias du1='du --max-depth=1'
