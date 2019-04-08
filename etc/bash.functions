@@ -3,7 +3,7 @@ parse_git_branch() {
 }
 
 my_ip() {
-    ifconfig | grep -oP "(?<=inet addr:)[\.0-9]*" | grep -v "127.0.0.1" | head -1
+    ifconfig | ggrep -oP "(?<=inet )[\.0-9]*" | grep -v "127.0.0.1" | head -1
 }
 
 trim() {

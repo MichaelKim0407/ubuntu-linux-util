@@ -1,7 +1,3 @@
-if [ -f /etc/bash.functions ]; then
-    source /etc/bash.functions
-fi
+[ -r "/etc/bash.aliases" ] && . "/etc/bash.aliases"
 
-if [ -f /etc/bash.aliases ];then
-    source /etc/bash.aliases
-fi
+[ -r "/etc/bash.functions" ] && . "/etc/bash.functions"

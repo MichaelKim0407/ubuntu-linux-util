@@ -35,7 +35,7 @@ func SetTitle()
         call setline(1, "#!/bin/bash")
         call append(line("."), "")
     elseif &filetype == 'python'
-        call setline(1, "#!/usr/bin/python3")
+        call setline(1, "#!/usr/local/bin/python3")
         call append(line("."), "")
     endif
 endfunc

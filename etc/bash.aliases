@@ -1,8 +1,18 @@
-alias ls='ls-git --color=auto'
+alias ls='ls-git -G'
+
+alias grep='ggrep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
 alias lll='/bin/ls -laGF'
 
-alias du1='du --max-depth=1'
+alias netstat='lsof -i -n -P'
+alias du1='du -d 1'
 
 alias gzcat='gzip -cd'
 
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias updatedb='gupdatedb'
+alias locate='glocate'
