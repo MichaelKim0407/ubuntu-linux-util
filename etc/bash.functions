@@ -17,3 +17,17 @@ trim() {
 
     echo "$var"
 }
+
+get_venv_name() {
+    if [[ -z "${VIRTUAL_ENV}" ]]; then
+        return
+    fi
+
+    local name="$(basename ${VIRTUAL_ENV})"
+
+    if [[ "${name}" == ".venv" ]] || [[ "${name}" == "venv" ]] || [[ "${name}" == "env" ]]; then
+        name="$(basename $(dirname ${VIRTUAL_ENV}))/${name}"
+    fi
+
+    echo "${name}"
+}
