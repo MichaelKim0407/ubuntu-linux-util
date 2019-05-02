@@ -22,5 +22,5 @@ branches=$(git branch -avv | grep -oP "(?<=remotes/${src}/)[^\ ]*" | grep -v HEA
 
 for branch in ${branches}; do
     echo "Pushing ${branch}"
-    git push "${target}" "origin/${branch}:refs/heads/${branch}"
+    git push "${target}" "${src}/${branch}:refs/heads/${branch}"
 done
