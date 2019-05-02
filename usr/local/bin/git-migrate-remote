@@ -1,0 +1,26 @@
+#!/bin/bash
+
+print_help () {
+    echo "Usage: $(basename $0) SOURCE TARGET"
+}
+
+if [[ -z "$1" ]]; then
+    print_help
+    echo "Please specify source remote"
+    exit 1
+fi
+src="$1"
+
+if [[ -z "$2" ]]; then
+    print_help
+    echo "Please specify target remote"
+    exit 1
+fi
+target="$2"
+
+branches=$(git branch -avv | grep -oP "(?<=remotes/${src}/)[^\ ]*" | grep -v HEAD)
+
+for branch in ${branches}; do
+    echo "Pushing ${branch}"
+    git push "${target}" "origin/${branch}:refs/heads/${branch}"
+done
