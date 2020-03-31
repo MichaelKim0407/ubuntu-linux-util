@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [ -z "$@" ]; then
+    echo Please provide args
+    exit 1
+fi
+
+tags=$(docker-images "$@")
+if [ -z "$tags" ]; then
+    echo No tags found for "$@"
+    exit 0
+fi
+
+docker rmi $tags
