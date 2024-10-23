@@ -3,11 +3,11 @@
 Run as `root` in this directory:
 
 ```
-ln -s $(pwd)/bash.* /etc/
+ln -s $(pwd)/bash.* /private/etc/
 ```
 
-Add at the bottom of `/etc/bash.bashrc`
+Add at the bottom of `/private/etc/bashrc`
 
 ```
-source /etc/bash.bashrc.append
+source /private/etc/bash.bashrc.append
 ```

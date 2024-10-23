@@ -18,7 +18,7 @@ if [[ -z "$2" ]]; then
 fi
 target="$2"
 
-branches=$(git branch -avv | grep -oP "(?<=remotes/${src}/)[^\ ]*" | grep -v HEAD)
+branches=$(git branch -avv | ggrep -oP "(?<=remotes/${src}/)[^\ ]*" | ggrep -v HEAD)
 
 for branch in ${branches}; do
     echo "Pushing ${branch}"
